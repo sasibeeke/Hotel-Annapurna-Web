@@ -13,9 +13,14 @@ function prepareEsewaPayment($booking_id, $amount, $tax_amount, $total_amount) {
     $product_code = 'EPAYTEST';
     
     $base_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]";
-    $success_url = $base_url . "/Hotel-Annapurna-Web/esewa-success.php";
-    $failure_url = $base_url . "/Hotel-Annapurna-Web/esewa-failure.php";
+    // $success_url = $base_url . "/Hotel-Annapurna-Web/esewa-success.php";
+    // $failure_url = $base_url . "/Hotel-Annapurna-Web/esewa-failure.php";
     
+    $success_url = $base_url . "/esewa-success.php"; // for docker setup
+    $failure_url = $base_url . "/esewa-failure.php"; // for docker setup
+    
+
+
     $transaction_uuid = $booking_id . '-' . date('Ymd-His');
     
     $formatted_amount = floatval($amount);

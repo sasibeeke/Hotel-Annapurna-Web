@@ -1,7 +1,8 @@
 <?php
-$host = "localhost";
+// $host = "localhost";
+$host = "db"; // Use the service name defined in docker-compose.yml for the database container
 $user = "root";
-$pass = "";
+$pass = "root";
 $dbname = "hotel_annapurna_db";
 
 $conn = mysqli_connect($host, $user, $pass, $dbname);

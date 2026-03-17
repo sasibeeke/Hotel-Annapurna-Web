@@ -368,8 +368,11 @@ include 'includes/header.php';
             product_code: 'EPAYTEST',
             product_service_charge: productServiceCharge,
             product_delivery_charge: productDeliveryCharge,
-            success_url: window.location.origin + '/Hotel-Annapurna-Web/esewa-success.php',
-            failure_url: window.location.origin + '/Hotel-Annapurna-Web/esewa-failure.php',
+            // success_url: window.location.origin + '/Hotel-Annapurna-Web/esewa-success.php',
+            // failure_url: window.location.origin + '/Hotel-Annapurna-Web/esewa-failure.php',
+            success_url: window.location.origin + '/esewa-success.php', // for docker setup
+            failure_url: window.location.origin + '/esewa-failure.php', // for docker setup
+       
             signed_field_names: 'total_amount,transaction_uuid,product_code'
         };
         
