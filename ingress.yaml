@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: annapurnaweb-ingress
+spec:
+  rules:
+  - host: annapurnaweb.local
+    http:
+      paths: 
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: annapurnaweb-service
+            port:
+              number: 80

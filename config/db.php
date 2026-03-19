@@ -1,6 +1,7 @@
 <?php
 // $host = "localhost";
-$host = "db"; // Use the service name defined in docker-compose.yml for the database container
+// $host = "db"; // Use the service name defined in docker-compose.yml for the database container
+$host = "mysql"; // Alternative service name if "db" doesn't work
 $user = "root";
 $pass = "root";
 $dbname = "hotel_annapurna_db";
