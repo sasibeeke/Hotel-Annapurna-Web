@@ -4,8 +4,8 @@ metadata:
   name: annapurnaweb-ingress
 spec:
   rules:
-  - host: annapurnaweb.local
-    http:
+    #- host: annapurnaweb.local
+  - http:
       paths: 
       - path: /
         pathType: Prefix
