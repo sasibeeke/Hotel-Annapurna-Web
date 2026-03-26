@@ -33,7 +33,7 @@ $staff_members = $stmt_staff->get_result();
 <section class="service-option-container">
     <!-- Section Title -->
     <div class="section-title">
-        <h2>Explore Our Premium Services S</h2>
+        <h2>Explore Our Premium Services New change check for argo</h2>
         <p>
             Experience the finest hospitality with our world-class accommodations, dining options, and culinary delights, all designed to make your stay memorable.
         </p>
