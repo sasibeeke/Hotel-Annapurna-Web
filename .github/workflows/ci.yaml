@@ -24,13 +24,3 @@ jobs:
           run: |
             docker build -t sasibk/annapurnaweb:${{ github.run_number  }} .
             docker push sasibk/annapurnaweb:${{ github.run_number }}
-
-        - name: Set Kubeconfig
-          run: |
-            mkdir -p $HOME/.kube
-            echo "${{ secrets.KUBE_CONFIG }}" > $HOME/.kube/config
-            
-        - name: Update deployment image
-          run: |
-            kubectl set image deployment/annapurnaweb \
-            app=sasibk/annapurnaweb:${{ github.run_number }}
