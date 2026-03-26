@@ -33,8 +33,12 @@ jobs:
          
         - name: Update Kubernetes manifest
           run: |
-            sed -i "s|image: .*|image: sasibk/annapurnaweb:${{ github.run_number }}|" k8s/deployment.yaml
-        
+            #sed -i "s|image: .*|image: sasibk/annapurnaweb:${{ github.run_number }}|" k8s/deployment.yaml
+            IMAGE_TAG=${{ github.run_number }}
+            echo "Updating image to $IMAGE_TAG"
+            sed -i "s|image: sasibk/annapurnaweb:.*|image: sasibk/annapurnaweb:${IMAGE_TAG}|" k8s/deployment.yaml
+            cat k8s/deployment.yaml
+
         - name: Commit and push changes
           run: |
             git config user.name "github-actions"
