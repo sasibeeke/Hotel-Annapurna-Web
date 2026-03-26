@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: sasibk/annapurnaweb:7
+        image: sasibk/annapurnaweb:11
         imagePullPolicy: Always   
         ports:
         - containerPort: 80
