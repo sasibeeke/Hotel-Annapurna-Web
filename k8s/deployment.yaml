@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: annapurnaweb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: annapurnaweb
+  template:
+    metadata:
+      labels:
+        app: annapurnaweb
+    spec:
+      containers:
+      - name: app
+        image: sasibk/annapurnaweb
+        ports:
+        - containerPort: 80
